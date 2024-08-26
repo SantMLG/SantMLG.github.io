@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Saludable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Vida Saludable</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('img/TransformaVida.png');">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                    <div class="text-center text-white">
+                        <h1 class="display-3">Transforma tu Vida</h1>
+                        <p class="lead">Descubre cómo adoptar un estilo de vida saludable con nuestras guías y recursos.</p>
+                        <a href="dashboard.html" class="btn btn-primary btn-lg">Ir al Dashboard</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('img/Alcance.png');">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                    <div class="text-center text-white">
+                        <h1 class="display-3">Bienestar a tu Alcance</h1>
+                        <p class="lead">Encuentra consejos prácticos para mejorar tu salud física y mental.</p>
+                        <a href="dashboard.html" class="btn btn-primary btn-lg">Explorar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('img/ViveSaludable.png');">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                    <div class="text-center text-white">
+                        <h1 class="display-3">Vive Saludable</h1>
+                        <p class="lead">Únete a nuestra comunidad y transforma tu estilo de vida.</p>
+                        <a href="dashboard.html" class="btn btn-primary btn-lg">Únete Hoy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </section>
+
+
+    <!-- Content Section -->
+    <section class="features py-5 text-center">
+        <div class="container">
+            <h2 class="mb-5">Beneficios de un Estilo de Vida Saludable</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/Salud.png" class="card-img-top" alt="Salud">
+                        <div class="card-body">
+                            <h3 class="card-title">Mejora tu Salud</h3>
+                            <p class="card-text">Mantente activo y reduce el riesgo de enfermedades crónicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/Energia.png" class="card-img-top" alt="Energía">
+                        <div class="card-body">
+                            <h3 class="card-title">Más Energía</h3>
+                            <p class="card-text">Disfruta de más energía y vitalidad en tu día a día.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/EstadoAnimo.png" class="card-img-top" alt="Ánimo">
+                        <div class="card-body">
+                            <h3 class="card-title">Mejora tu Estado de Ánimo</h3>
+                            <p class="card-text">Un estilo de vida saludable te ayudará a sentirte mejor mental y emocionalmente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Vida Saludable. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
