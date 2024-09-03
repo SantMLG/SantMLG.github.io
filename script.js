@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicialización del dashboard
-    // Aquí puedes agregar funciones para manipular y mostrar datos
-    console.log("Dashboard cargado.");
-});
-
 new Morris.Line({
     // ID of the element in which to draw the chart.
     element: 'myfirstchart',

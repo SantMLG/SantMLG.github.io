@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Carousel Section */
+.carousel-item {
+    height: 400px; /* Fija la altura del carrusel */
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item img {
+    height: 100%; /* La imagen ocupa el 100% de la altura del carrusel */
+    width: 100%; /* La imagen ocupa el 100% del ancho del carrusel */
+    object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #e0e0e0; /* Fondo gris suave para contraste */
+    padding: 50px 0;
+}
+
+.blog-article {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-article:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 24px 48px rgba(0, 0, 0, 0.25);
+}
+
+.blog-article img {
+    width: 100%; /* Asegura que la imagen ocupa el ancho completo de la tarjeta */
+    height: 180px; /* Reduce la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+    border-radius: 10px 10px 0 0;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article-title {
+    font-size: 1.8rem;
+    color: #009688;
+    margin-bottom: 15px;
+}
+
+.article-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+
+    .blog-article img {
+        height: 150px; /* Ajuste adicional para pantallas pequeñas */
+    }
+
+    .article-title {
+        font-size: 1.5rem;
+    }
+}

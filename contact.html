@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Vida Saludable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Vida Saludable</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Empieza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Team Section -->
+    <section class="team-section py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Nuestro Equipo</h1>
+            <div class="row">
+                <!-- Person 1 -->
+                <div class="col-md-4">
+                    <div class="card team-member">
+                        <img src="img/user.jpg" class="card-img-top" alt="Persona 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nombre de Persona 1</h5>
+                            <p class="card-text">Rol en el Proyecto</p>
+                            <p class="card-text"><i class="fas fa-envelope"></i> email@example.com</p>
+                            <p class="card-text"><i class="fas fa-phone"></i> +52 555 555 5555</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Person 2 -->
+                <div class="col-md-4">
+                    <div class="card team-member">
+                        <img src="img/user.jpg" class="card-img-top" alt="Persona 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nombre de Persona 2</h5>
+                            <p class="card-text">Rol en el Proyecto</p>
+                            <p class="card-text"><i class="fas fa-envelope"></i> email@example.com</p>
+                            <p class="card-text"><i class="fas fa-phone"></i> +52 555 555 5555</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Person 3 -->
+                <div class="col-md-4">
+                    <div class="card team-member">
+                        <img src="img/user.jpg" class="card-img-top" alt="Persona 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nombre de Persona 3</h5>
+                            <p class="card-text">Rol en el Proyecto</p>
+                            <p class="card-text"><i class="fas fa-envelope"></i> email@example.com</p>
+                            <p class="card-text"><i class="fas fa-phone"></i> +52 555 555 5555</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ponte en Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Vida Saludable. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
