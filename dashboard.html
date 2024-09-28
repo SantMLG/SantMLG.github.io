@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7Og5Dh9jp81d53hsw/aLk49V0zODImv46Dn" crossorigin="anonymous">
 </head>
 <body>
     <input type="checkbox" id="menu-toggle">
@@ -17,10 +18,20 @@
         </div>
         <div class="sidemenu">
             <div class="side-user">
-                <div class="side-img" style="background-image: url(img/user.jpg);"></div>
+                <div class="side-img" id="userImage" style="background-image: url(img/user.jpg);"></div>
                 <div class="user">
                     <small>Fernando Briseno</small>
                     <p>Software Developer</p> 
+                </div>
+                <!-- Sección para cambiar de usuario, envuelta en un div -->
+                <div id="userSelectSection" style="display: none;">
+                    <label for="userSelectDropdown">Cambiar de Usuario:</label>
+                    <select id="userSelectDropdown" onchange="changeUser(this.value)">
+                        <option value="">Selecciona un usuario</option>
+                        <option value="user1">Fernando Briseno</option>
+                        <option value="user2">Luis Perez</option>
+                        <option value="user3">Maria Gomez</option>
+                    </select>
                 </div>
             </div>
 
@@ -98,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="chart-grid">
+            <div class="chart-grid" id="chartContainer">
                 <div class="chart-follow">
                     <div class="chart-head">
                         <h3>Historico</h3>
@@ -124,5 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

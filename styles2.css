@@ -314,6 +314,40 @@ main {
     transition: right 300ms;
 }
 
+/* Estilo para el dropdown */
+select {
+    background-color: var(--bg); /* Fondo igual que el resto de la interfaz */
+    color: white; /* Texto en blanco */
+    border: 2px solid var(--main); /* Borde con el color principal */
+    padding: 10px; /* Espacio interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Abarca el 100% del contenedor */
+    appearance: none; /* Oculta la flecha del dropdown predeterminada */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Flecha personalizada a la derecha */
+    background-size: 12px;
+}
+
+/* Estilo para las opciones */
+option {
+    background-color: var(--bg-body); /* Fondo de las opciones */
+    color: white; /* Texto blanco */
+}
+
+/* Cambiar el color cuando se hace hover sobre el dropdown */
+select:hover {
+    border-color: #ffbc01; /* Cambia el borde al hacer hover */
+}
+
+/* Cambiar el color cuando se selecciona una opción */
+select:focus {
+    border-color: #0072f2; /* Cambia el borde al enfocarse */
+    outline: none; /* Remueve el borde de foco predeterminado */
+}
+
+
 @media only screen and (max-width: 1124px) {
     #menu-toggle ~ .sidebar .brand h2 {
         display: none;
