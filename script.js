@@ -101,8 +101,13 @@ if (isAdmin) {
 }
 
 // Función para cargar los datos de un usuario
+// Función para cargar los datos de un usuario
 function loadUserData(username) {
     const userData = usersData[username];
+
+    // Limpiar los contenedores de las gráficas
+    document.getElementById('myfirstchart').innerHTML = '';
+    document.getElementById('donut-example').innerHTML = '';
 
     // Actualizar el nombre y rol del usuario en el sidebar
     document.querySelector('.side-user small').textContent = userData.name;
@@ -125,13 +130,14 @@ function loadUserData(username) {
         labels: ['Value']
     });
 
-    Morris.Donut({
+    new Morris.Donut({
         element: 'donut-example',
         data: userData.ejercicio,
         colors: ['orange', '#0072f2', '#f42a26'],
         labelColor: '#ffffff'
     });
 }
+
 
 // Función para cambiar de usuario
 function changeUser(username) {
