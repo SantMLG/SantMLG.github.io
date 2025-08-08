@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Para ti...</title>
+
+<!-- Fuente estilo Halloween -->
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    margin: 0;
+    background: #0a0a0a;
+    color: #ff3b3b;
+    font-family: 'Creepster', cursive;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+    animation: flickerText 2s infinite;
+    top: 40%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: color 0.8s ease;
+  }
+
+  /* Color clases */
+  .rojo { color: #ff3b3b; }
+  .verde { color: #3bff3b; }
+  .amarillo { color: #ffeb3b; }
+  .naranja { color: #ff6f00; }
+  .morado { color: #9b30ff; }
+
+  /* Animación parpadeo texto */
+  @keyframes flickerText {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.5; }
+  }
+
+  /* Imágenes de fondo */
+  .bg-img {
+    position: absolute;
+    filter: blur(2px) opacity(0.35);
+    animation: flickerImg 4s infinite;
+    z-index: 2;
+    pointer-events: none;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bg1 { top: 10%; left: 5%; width: 200px; animation-delay: 0s; }
+  .bg2 { top: 50%; left: 70%; width: 250px; animation-delay: 1s; }
+  .bg3 { top: 20%; left: 40%; width: 180px; animation-delay: 2s; }
+
+  /* Animación parpadeo imágenes */
+  @keyframes flickerImg {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 0.35; }
+    20%, 24%, 55% { opacity: 0.05; }
+  }
+
+  /* Canvas para partículas */
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  /* Icono de regalo */
+  #regalo {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: #ffeb3b;
+    cursor: pointer;
+    z-index: 20;
+    text-shadow: 0 0 20px #ffeb3b, 0 0 40px #ffeb3b;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+  }
+
+  /* Contenedor del video */
+  #video-container {
+    display: none;
+    position: fixed;
+    top:0; left:0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 30;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #video-container video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 3px solid #ff3b3b;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff3b3b;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      top: 35%;
+    }
+    .bg1 { width: 120px; top: 5%; left: 2%; }
+    .bg2 { width: 140px; top: 55%; left: 60%; }
+    .bg3 { width: 110px; top: 25%; left: 35%; }
+    #regalo {
+      font-size: 4rem;
+      top: 40%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+      top: 30%;
+    }
+    .bg1, .bg2, .bg3 {
+      filter: blur(1.5px) opacity(0.3);
+    }
+    #regalo {
+      font-size: 3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Fondo animado -->
+<div id="particles-js"></div>
+
+<!-- Imágenes de fondo -->
+<img src="img/leatherface.png" class="bg-img bg1" alt="Leatherface" />
+<img src="img/Myers.png" class="bg-img bg2" alt="Michael Myers" />
+<img src="img/oogie.jpeg" class="bg-img bg3" alt="Oogie Boogie" />
+
+<!-- Texto -->
+<h1 id="texto" class="rojo">Para mi niña...</h1>
+
+<!-- Icono de regalo -->
+<div id="regalo" title="Haz clic para ver el regalo">🎁</div>
+
+<!-- Contenedor video -->
+<div id="video-container">
+  <video id="video" controls>
+    <source src="video/tu-video.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
+</div>
+
+<!-- Librería particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 50 },
+      shape: { type: "circle" },
+      size: { value: 5 },
+      move: { speed: 1 },
+      color: { value: ["#ff3b3b", "#ffaa00", "#ffffff"] },
+      opacity: { value: 0.8 },
+      line_linked: { enable: false },
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: "repulse" } },
+    },
+  });
+
+  const textos = [
+    { mensaje: "Para mi niña...", clase: "rojo" },
+    { mensaje: "Gracias por estar conmigo", clase: "amarillo" },
+    { mensaje: "Eres mi luz en la oscuridad", clase: "verde" },
+    { mensaje: "Quiero estar a tu lado", clase: "naranja"},
+    { mensaje: "Te amo con todo mi corazon", clase: "morado"},
+    { mensaje: "Eres el amor de mi vida", clase:"rojo"},
+    { mensaje: "Y quiero pasar hasta mis ultimos dias contigo", clase:"amarillo"},
+    { mensaje: "Recuerda que sin importar la oscuridad", clase:"verde"},
+    { mensaje: "Estare ahi para cuando me necesites", clase:"verde"},
+  ];
+
+  let indice = 0;
+  const textoElemento = document.getElementById("texto");
+  const regalo = document.getElementById("regalo");
+  const videoContainer = document.getElementById("video-container");
+  const video = document.getElementById("video");
+
+  textoElemento.addEventListener("click", () => {
+    indice++;
+    if(indice >= textos.length){
+      // Se terminó la lista, ocultar texto y mostrar regalo
+      textoElemento.style.display = "none";
+      regalo.style.display = "block";
+    } else {
+      textoElemento.textContent = textos[indice].mensaje;
+      textoElemento.className = textos[indice].clase;
+    }
+  });
+
+  // Al dar clic en el regalo, mostrar video
+  regalo.addEventListener("click", () => {
+    regalo.style.display = "none";
+    videoContainer.style.display = "flex";
+    video.play();
+  });
+
+  // Cerrar video al dar click fuera o presionar Esc
+  videoContainer.addEventListener("click", (e) => {
+    if(e.target === videoContainer){
+      video.pause();
+      video.currentTime = 0;
+      videoContainer.style.display = "none";
+      textoElemento.style.display = "block";
+      textoElemento.textContent = textos[0].mensaje;
+      textoElemento.className = textos[0].clase;
+      indice = 0;
+      regalo.style.display = "none";
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && videoContainer.style.display === "flex"){
+      video.pause();
+      video.currentTime = 0;
+      videoContainer.style.display = "none";
+      textoElemento.style.display = "block";
+      textoElemento.textContent = textos[0].mensaje;
+      textoElemento.className = textos[0].clase;
+      indice = 0;
+      regalo.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
